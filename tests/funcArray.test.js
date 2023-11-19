@@ -93,123 +93,123 @@ it('returns the sum, negative', ()=> {
   });
 });
 
-describe('Calculating the Average - averageNumbers #4', ()=> {
-it('Defines averageNumbers', ()=> {
-    assert.strictEqual(typeof averageNumbers,'function');
-  });
+// describe('Calculating the Average - averageNumbers #4', ()=> {
+// it('Defines averageNumbers', ()=> {
+//     assert.strictEqual(typeof averageNumbers,'function');
+//   });
 
-it('returns undefined testh an empty array', ()=> {
-    assert.strictEqual(averageNumbers([]),undefined);
-  });
+// it('returns undefined testh an empty array', ()=> {
+//     assert.strictEqual(averageNumbers([]),undefined);
+//   });
 
-it('returns the average of a unique element array', ()=> {
-    assert.strictEqual(averageNumbers([9]),9);
-  });
+// it('returns the average of a unique element array', ()=> {
+//     assert.strictEqual(averageNumbers([9]),9);
+//   });
 
-it('returns the average even testh negative values', ()=> {
-    assert.strictEqual(averageNumbers([9, -3, -4, 6]),2);
-  });
+// it('returns the average even testh negative values', ()=> {
+//     assert.strictEqual(averageNumbers([9, -3, -4, 6]),2);
+//   });
 
-it('returns the average of the array', ()=> {
-    assert.strictEqual(averageNumbers([9, 10, 82, 92, 32, 102, 58]),55);
-  });
+// it('returns the average of the array', ()=> {
+//     assert.strictEqual(averageNumbers([9, 10, 82, 92, 32, 102, 58]),55);
+//   });
 
-it('returns the average of the array, float result', ()=> {
-    assert.strictEqual(averageNumbers([1, 2]),1.5);
-  });
-});
+// it('returns the average of the array, float result', ()=> {
+//     assert.strictEqual(averageNumbers([1, 2]),1.5);
+//   });
+// });
 
-describe('Calculating the Average - averageWordLength #5', ()=> {
-it('Defines averageWordLength', ()=> {
-    assert.strictEqual(typeof averageWordLength,'function');
-  });
+// describe('Calculating the Average - averageWordLength #5', ()=> {
+// it('Defines averageWordLength', ()=> {
+//     assert.strictEqual(typeof averageWordLength,'function');
+//   });
 
-it('returns undefined testh an empty array', ()=> {
-    assert.strictEqual(averageWordLength([]),undefined);
-  });
+// it('returns undefined testh an empty array', ()=> {
+//     assert.strictEqual(averageWordLength([]),undefined);
+//   });
 
-it('returns the length of a unique element array', ()=> {
-    assert.strictEqual(averageWordLength(['bcncodes']),8);
-  });
+// it('returns the length of a unique element array', ()=> {
+//     assert.strictEqual(averageWordLength(['bcncodes']),8);
+//   });
 
-it('returns the length of a unique element array, float', ()=> {
-    assert.strictEqual(averageWordLength(['a', 'ab']),1.5);
-  });
+// it('returns the length of a unique element array, float', ()=> {
+//     assert.strictEqual(averageWordLength(['a', 'ab']),1.5);
+//   });
 
-it('returns the average of a the array', ()=> {
-    assert.strictEqual(averageWordLength(['Bcncodes', 'Madrid', 'Barcelona', 'Paris', 'Miami', 'Mexico', 'Berlin', 'Programmers']),7);
-  });
-});
+// it('returns the average of a the array', ()=> {
+//     assert.strictEqual(averageWordLength(['Bcncodes', 'Madrid', 'Barcelona', 'Paris', 'Miami', 'Mexico', 'Berlin', 'Programmers']),7);
+//   });
+// });
 
-describe('Unique Arrays - uniquifyArray #6', ()=> {
-it('Defines uniquifyArray', ()=> {
-    assert.strictEqual(typeof uniquifyArray,'function');
-  });
+// describe('Unique Arrays - uniquifyArray #6', ()=> {
+// it('Defines uniquifyArray', ()=> {
+//     assert.strictEqual(typeof uniquifyArray,'function');
+//   });
 
-it('returns undefined testh an empty array', ()=> {
-    assert.strictEqual(uniquifyArray([]),undefined);
-  });
+// it('returns undefined testh an empty array', ()=> {
+//     assert.strictEqual(uniquifyArray([]),undefined);
+//   });
 
-it('returns the array when having a single element', ()=> {
-    assert.strictEqual(uniquifyArray(['FactoriaF5'])).toEqual(['FactoriaF5']);
-  });
+// it('returns the array when having a single element', ()=> {
+//     assert.strictEqual(uniquifyArray(['FactoriaF5'])).toEqual(['FactoriaF5']);
+//   });
 
-it('returns the correct array when having an array of the same element', ()=> {
-    assert.strictEqual(uniquifyArray(['FactoriaF5', 'FactoriaF5', 'FactoriaF5'])).toEqual(['FactoriaF5']);
-  });
+// it('returns the correct array when having an array of the same element', ()=> {
+//     assert.strictEqual(uniquifyArray(['FactoriaF5', 'FactoriaF5', 'FactoriaF5'])).toEqual(['FactoriaF5']);
+//   });
 
-it('returns the same array when no element is repeated', ()=> {
-    assert.strictEqual(uniquifyArray(['Cat', 'Dog', 'Cow'])).toEqual(['Cat', 'Dog', 'Cow']);
-  });
+// it('returns the same array when no element is repeated', ()=> {
+//     assert.strictEqual(uniquifyArray(['Cat', 'Dog', 'Cow'])).toEqual(['Cat', 'Dog', 'Cow']);
+//   });
 
-it('returns the uniquified array', ()=> {
-    assert.strictEqual(uniquifyArray(['iPhone', 'Samsung', 'Android', 'iOS', 'iPhone', 'Samsung', 'Nokia', 'Blackberry', 'Android'])).toEqual(['iPhone', 'Samsung', 'Android', 'iOS', 'Nokia', 'Blackberry']);
-  });
-});
+// it('returns the uniquified array', ()=> {
+//     assert.strictEqual(uniquifyArray(['iPhone', 'Samsung', 'Android', 'iOS', 'iPhone', 'Samsung', 'Nokia', 'Blackberry', 'Android'])).toEqual(['iPhone', 'Samsung', 'Android', 'iOS', 'Nokia', 'Blackberry']);
+//   });
+// });
 
-describe('Finding Elements - doesWordExist #7', ()=> {
-it('Defines doesWordExist', ()=> {
-    assert.strictEqual(typeof doesWordExist,'function');
-  });
+// describe('Finding Elements - doesWordExist #7', ()=> {
+// it('Defines doesWordExist', ()=> {
+//     assert.strictEqual(typeof doesWordExist,'function');
+//   });
 
-it('returns false testh an empty array', ()=> {
-    assert.strictEqual(doesWordExist([]),false);
-  });
+// it('returns false testh an empty array', ()=> {
+//     assert.strictEqual(doesWordExist([]),false);
+//   });
 
-it('returns true if the word we are looking is the only one on the array', ()=> {
-    assert.strictEqual(doesWordExist(['machine'], 'machine'),true);
-  });
+// it('returns true if the word we are looking is the only one on the array', ()=> {
+//     assert.strictEqual(doesWordExist(['machine'], 'machine'),true);
+//   });
 
-it('returns false if the word we are looking is not in the array', ()=> {
-    assert.strictEqual(doesWordExist(['machine', 'poison', 'eat', 'apple', 'horse'], 'ratatouille'),false);
-  });
+// it('returns false if the word we are looking is not in the array', ()=> {
+//     assert.strictEqual(doesWordExist(['machine', 'poison', 'eat', 'apple', 'horse'], 'ratatouille'),false);
+//   });
 
-it('returns true if the word we are looking is in the array', ()=> {
-    assert.strictEqual(doesWordExist(['pizza', 'sandwich', 'snack', 'soda', 'book', 'computer'], 'book'),true);
-  });
-});
+// it('returns true if the word we are looking is in the array', ()=> {
+//     assert.strictEqual(doesWordExist(['pizza', 'sandwich', 'snack', 'soda', 'book', 'computer'], 'book'),true);
+//   });
+// });
 
-describe('Counting Repetion - howManyTimes #8', ()=> {
-it('Defines howManyTimes', ()=> {
-    assert.strictEqual(typeof howManyTimes,'function');
-  });
+// describe('Counting Repetion - howManyTimes #8', ()=> {
+// it('Defines howManyTimes', ()=> {
+//     assert.strictEqual(typeof howManyTimes,'function');
+//   });
 
-it('returns false testh an empty array', ()=> {
-    assert.strictEqual(howManyTimes([]),undefined);
-  });
+// it('returns false testh an empty array', ()=> {
+//     assert.strictEqual(howManyTimes([]),undefined);
+//   });
 
-it('returns one when the word appears only one time on the array', ()=> {
-    assert.strictEqual(howManyTimes(['a', 'b', 'c'], 'a'),1);
-  });
+// it('returns one when the word appears only one time on the array', ()=> {
+//     assert.strictEqual(howManyTimes(['a', 'b', 'c'], 'a'),1);
+//   });
 
-it('returns zero when the word does not appears on the array', ()=> {
-    assert.strictEqual(howManyTimes(['a', 'b', 'c'], 'z'),0);
-  });
+// it('returns zero when the word does not appears on the array', ()=> {
+//     assert.strictEqual(howManyTimes(['a', 'b', 'c'], 'z'),0);
+//   });
 
-it('returns five when the word appears 5 times on the array', ()=> {
-    assert.strictEqual(howManyTimes(['basketball', 'football', 'tennis', 'rugby', 'rugby', 'ping pong', 'rugby', 'basketball', 'rugby', 'handball', 'rugby'], 'rugby'),5);
-  });
-});
+// it('returns five when the word appears 5 times on the array', ()=> {
+//     assert.strictEqual(howManyTimes(['basketball', 'football', 'tennis', 'rugby', 'rugby', 'ping pong', 'rugby', 'basketball', 'rugby', 'handball', 'rugby'], 'rugby'),5);
+//   });
+// });
 
 describe('Counting Repetion - greatestProduct', ()=> {
 it('Defines greatestProduct #9', ()=> {

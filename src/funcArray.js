@@ -1,29 +1,30 @@
 /* Encuentra el máximo */
 
 export function maxOfTwoNumbers(numero1,numero2){
+    if (numero1 === numero2){
+        return  numero1;
+    } else{
     return Math.max(numero1,numero2);  
+    }
 }
 
 export function findLongestWord(array){
-    let size = 0;
-    let result = "";
-
-    for (let i = 0; i < array.length; i++){
-        if (array[i].lenght > size) {
-            size = array[i].lenght;
-            result= array[i];
-
+        let result = "";
+        if (array.length === 0){
+            return undefined;
         }
+    for (let i = 0; i < array.length; i++){
+        if (result.length < array[i].length) {
+            result = array[i];
+        }
+        }
+        return result;
     }
-    return result;
-}
 
 export function sumArray(array){
-    for(let i = 0; i <= array.length; i++){
-        element = array[i];
-        suma += element;
-    }
-    return suma;
+    const initval = 0;
+    const sum= array.reduce((acum,cvalue) => acum + cvalue ,initval);
+    return sum;
 }
 
 export function averageNumbers(array){
