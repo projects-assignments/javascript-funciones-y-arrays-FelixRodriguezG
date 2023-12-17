@@ -1,12 +1,10 @@
 /* Encuentra el máximo */
 
 export function maxOfTwoNumbers(numero1,numero2){
-    if (numero1 === numero2){
-        return  numero1;
-    } else{
-    return Math.max(numero1,numero2);  
+        return Math.max(numero1,numero2);  
     }
-}
+
+/* Encuentra la palabra mas larga*/
 
 export function findLongestWord(array){
         let result = "";
@@ -21,26 +19,51 @@ export function findLongestWord(array){
         return result;
     }
 
-export function sumArray(array){
+/* Calcula la suma*/
+
+export function sumArray(array) {
     const initval = 0;
-    const sum= array.reduce((acum,cvalue) => acum + cvalue ,initval);
-    return sum;
+    const sum = array.reduce((acum,acvalue) => acum + acvalue ,initval);
+        return sum;
 }
 
-export function averageNumbers(array){
-    for(let i = 0; i <= array.length; i++){
-        element = array[i];
-        suma += element;
-        media = suma /array.lenght;
+/* Calcula la media aritmética*/
+/* Calculo de la media en un array con numeros*/
+
+export function averageNumbers(array) {
+    const initval = 0;
+    const sum = array.reduce((acum,acvalue) => acum + acvalue ,initval);
+    let elements = array.length;
+    if (elements === 0) {
+        return undefined;
+    } else {
+        return sum / elements;
+    } 
+}
+/* Calculo de la media de longitud de una array de strings*/
+export function averageWordLength(array){
+    const initval= 0;
+       const sumlength = array.reduce((acum,acvalue) => acum + acvalue.length, initval);
+    let elements = array.length;
+    if (elements === 0){
+        return undefined;
+    }else {
+        return sumlength / elements;
     }
-    return media;
 }
-export function averageWordLength(){
-
-}
-export function uniquifyArray(){
-
-}
+export function uniquifyArray(array){
+        let newArray = [];
+        for (let i = 0; i < array.length; i++) {
+          if (newArray.indexOf(array[i]) === -1) {
+            newArray.push(array[i]);
+          }
+        }
+        if (newArray.length === 0) {
+          return undefined;
+        } else {
+          return newArray;
+        }
+      }
 export function doesWordExist(array, palabra){ 
 
 }
