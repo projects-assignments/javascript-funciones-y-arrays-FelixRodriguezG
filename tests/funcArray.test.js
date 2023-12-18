@@ -141,53 +141,53 @@ it('1+1 = 2',()=>assert.strictEqual(1+1,2));
 //   });
 // });
 
-describe('Unique Arrays - uniquifyArray #6', ()=> {
-it('Defines uniquifyArray', ()=> {
-    assert.strictEqual(typeof uniquifyArray,'function');
-  });
-
-it('returns undefined testh an empty array', ()=> {
-    assert.strictEqual(uniquifyArray([]),undefined);
-  });
-
-it('returns the array when having a single element', ()=> {
-    assert.strictEqual(uniquifyArray(['FactoriaF5'])).toEqual(['FactoriaF5']);
-  });
-
-it('returns the correct array when having an array of the same element', ()=> {
-    assert.strictEqual(uniquifyArray(['FactoriaF5', 'FactoriaF5', 'FactoriaF5'])).toEqual(['FactoriaF5']);
-  });
-
-it('returns the same array when no element is repeated', ()=> {
-    assert.strictEqual(uniquifyArray(['Cat', 'Dog', 'Cow'])).toEqual(['Cat', 'Dog', 'Cow']);
-  });
-
-it('returns the uniquified array', ()=> {
-    assert.strictEqual(uniquifyArray(['iPhone', 'Samsung', 'Android', 'iOS', 'iPhone', 'Samsung', 'Nokia', 'Blackberry', 'Android'])).toEqual(['iPhone', 'Samsung', 'Android', 'iOS', 'Nokia', 'Blackberry']);
-  });
-});
-
-// describe('Finding Elements - doesWordExist #7', ()=> {
-// it('Defines doesWordExist', ()=> {
-//     assert.strictEqual(typeof doesWordExist,'function');
+// describe('Unique Arrays - uniquifyArray #6', ()=> {
+// it('Defines uniquifyArray', ()=> {
+//     assert.strictEqual(typeof uniquifyArray,'function');
 //   });
 
-// it('returns false testh an empty array', ()=> {
-//     assert.strictEqual(doesWordExist([]),false);
+// it('returns undefined testh an empty array', ()=> {
+//     assert.strictEqual(uniquifyArray([]),undefined);
 //   });
 
-// it('returns true if the word we are looking is the only one on the array', ()=> {
-//     assert.strictEqual(doesWordExist(['machine'], 'machine'),true);
+// it('returns the array when having a single element', ()=> {
+//     assert.equal(Array.toString(uniquifyArray(['FactoriaF5'])),Array.toString(['FactoriaF5']));
 //   });
 
-// it('returns false if the word we are looking is not in the array', ()=> {
-//     assert.strictEqual(doesWordExist(['machine', 'poison', 'eat', 'apple', 'horse'], 'ratatouille'),false);
+// it('returns the correct array when having an array of the same element', ()=> {
+//     assert.equal(Array.toString(uniquifyArray(['FactoriaF5', 'FactoriaF5', 'FactoriaF5'])),Array.toString(['FactoriaF5']));
 //   });
 
-// it('returns true if the word we are looking is in the array', ()=> {
-//     assert.strictEqual(doesWordExist(['pizza', 'sandwich', 'snack', 'soda', 'book', 'computer'], 'book'),true);
+// it('returns the same array when no element is repeated', ()=> {
+//     assert.equal(Array.toString(uniquifyArray(['Cat', 'Dog', 'Cow'])),Array.toString(['Cat', 'Dog', 'Cow']));
+//   });
+
+// it('returns the uniquified array', ()=> {
+//     assert.equal(Array.toString(uniquifyArray(['iPhone', 'Samsung', 'Android', 'iOS', 'iPhone', 'Samsung', 'Nokia', 'Blackberry', 'Android'])),Array.toString(['iPhone', 'Samsung', 'Android', 'iOS', 'Nokia', 'Blackberry']));
 //   });
 // });
+
+describe('Finding Elements - doesWordExist #7', ()=> {
+it('Defines doesWordExist', ()=> {
+    assert.strictEqual(typeof doesWordExist,'function');
+  });
+
+it('returns false testh an empty array', ()=> {
+    assert.strictEqual(doesWordExist([]),false);
+  });
+
+it('returns true if the word we are looking is the only one on the array', ()=> {
+    assert.strictEqual(doesWordExist(['machine'], 'machine'),true);
+  });
+
+it('returns false if the word we are looking is not in the array', ()=> {
+    assert.strictEqual(doesWordExist(['machine', 'poison', 'eat', 'apple', 'horse'], 'ratatouille'),false);
+  });
+
+it('returns true if the word we are looking is in the array', ()=> {
+    assert.strictEqual(doesWordExist(['pizza', 'sandwich', 'snack', 'soda', 'book', 'computer'], 'book'),true);
+  });
+});
 
 // describe('Counting Repetion - howManyTimes #8', ()=> {
 // it('Defines howManyTimes', ()=> {
