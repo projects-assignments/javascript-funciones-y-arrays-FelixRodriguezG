@@ -60,21 +60,33 @@ export function uniquifyArray(array) {
     }
     if (newArray.length === 0) {
         return undefined;
-    } else  {
+    } else {
         return newArray;
     }
 }
 
 // Escribe una función `doesWordExist` que reciba un array de palabras como argumento y una palabra para buscar dentro del array. Devuelve `true` si existe, sino devuelve `false`. **No** utilices `indexOf` en este caso.
 export function doesWordExist(array, palabra) {
-
-
-
+    if (array.length === 0) {
+        return false;
+    } return array.includes(palabra);
 }
-
-export function howManyTimes() {
-
+//Escribe una función `howManyTimes` que tome un array de palabras como argumento y una palabra para buscar. La función devolverá el número de veces que una palabra aparece en el array.
+export function howManyTimes(array, palabra) {
+    let contador = 0;
+    if (array.length === 0){
+        return undefined;
+    }
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === palabra) {
+            contador += 1;
+        }else{
+        contador = contador;
+        }
+    }
+    return contador;
 }
+//Bonus
 export function greatestProduct() {
 
 }
