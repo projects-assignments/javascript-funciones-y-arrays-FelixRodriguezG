@@ -18,6 +18,10 @@ export function findLongestWord(array) {
     }
     return result;
 }
+// export function findLongestWord(array) {
+// return array.reduce((longestWord, currentWord) => current.length >longestWord.length ? currentWord : longestWord, array[0]);
+// }
+
 
 /* Calcula la suma*/
 
@@ -87,11 +91,74 @@ export function howManyTimes(array, palabra) {
     return contador;
 }
 //Bonus
-export function greatestProduct() {
+export function greatestProduct(matrix) {
+    let maxProduct=0;
+    for (let y = 0; y < matrix.length; y++) {//horizontal
+        for (let x = 0; x < matrix[y].length ; x++) {
+            const product = matrix[y][x] * matrix[y][x + 1] * matrix[y][x + 2] * matrix[y][x + 3];
 
+            if (product > maxProduct) {
+                maxProduct = product;
+            }
+        }
+    }
+    
+    for (let y = 0; y < matrix.length-3; y++) { //vertical
+        for (let x = 0; x < matrix[y].length ; x++) {
+            const product = matrix[y][x] * matrix[y+1][x ] * matrix[y+2][x] * matrix[y+3][x];
+
+            if (product > maxProduct) {
+                maxProduct = product;
+            }
+        }
+    }
+    for (let y = 0; y < matrix.length-3; y++) { //diagonal 
+        for (let x = 0; x < matrix[y].length-3 ; x++) {
+            const product = matrix[y][x] * matrix[y+1][x+1 ] * matrix[y+2][x+2] * matrix[y+3][x+3];
+            
+            if (product > maxProduct) {
+                maxProduct = product;
+            }
+        }
+    }
+    for (let y = 0; y < matrix.length-3; y++) { //diagonal inversa
+        for (let x = 3; x < matrix[y].length; x++) {
+            const product = matrix[y][x] * matrix[y+1][x-1] * matrix[y+2][x-2] * matrix[y+3][x-3];
+
+            if (product > maxProduct) {
+                maxProduct = product;
+            }
+        }
+        return maxProduct;
+    }
 }
 
 
 
+// export function greatestProduct(matrix) {
+//     let maxProduct = 0;
+//     for (let x = 0; x < matrix.length - 3; x++) {
+//         for (let z = 0; z < matrix[x].length - 3; z++) {
+//             const productHorizontal = matrix[x][z] * matrix[x][z + 1] * matrix[x][z + 2] * matrix[x][z + 3];
+//             if (productHorizontal > maxProduct) {
+//                 maxProduct = productHorizontal;
+//             }
 
+//             const productVertical = matrix[x][z] * matrix[x + 1][z] * matrix[x + 2][z] * matrix[x + 3][z];
+//             if (productVertical > maxProduct) {
+//                 maxProduct = productVertical;
+//             }
 
+//             const productDiagonal = matrix[x][z] * matrix[x + 1][z + 1] * matrix[x + 2][z + 2] * matrix[x + 3][z + 3];
+//             if (productDiagonal > maxProduct) {
+//                 maxProduct = productDiagonal;
+//             }
+
+//             const productDiagonalInversa = matrix[x][z + 3] * matrix[x +1][z +2] * matrix[x + 2][z + 1] * matrix[x + 3][z];
+//             if (productDiagonalInversa > maxProduct) {
+//                 maxProduct = productDiagonalInversa;
+//             }
+//         }
+//     }
+//     return maxProduct;
+// }
